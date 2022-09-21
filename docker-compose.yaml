@@ -1,0 +1,21 @@
+version: '3.2'
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: 'Dockerfile.api'
+    restart: always
+    environment:
+      - PORT=3000
+    env_file:
+      - .env.api
+  server:
+    restart: always
+    build:
+      context: .
+      dockerfile: 'Dockerfile.server'
+    env_file:
+      - .env.server
+    ports:
+      - 8001:443

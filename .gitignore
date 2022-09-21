@@ -1,0 +1,11 @@
+.DS_Store
+__pycache__
+node_modules
+.ipynb_checkpoints
+*.ipynb
+.python-version
+.nvmrc
+*.db
+.env*
+!.env*.example
+nogit*
